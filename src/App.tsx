@@ -9,9 +9,9 @@ import Contact from './pages/Contact'
 import Profile from './pages/Profile'
 import Edukasi from './pages/Edukasi'
 import Materi from './pages/Materi'
-import TbDewasa from './pages/TbDewasa'
-import TbAnak from './pages/TbAnak'
-import PmoTuberkulosis from './pages/PmoTuberkulosis'
+import TbDewasa from './pages/materi/TbDewasa'
+import TbAnak from './pages/materi/TbAnak'
+import PmoTuberkulosis from './pages/materi/PmoTuberkulosis'
 
 function App(props: { disableCustomTheme?: boolean }) {
   return (
