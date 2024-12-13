@@ -6,7 +6,7 @@ import logo_kemenkes from '/logos/Logo_Kemenkes.png';
 import logo_kemenkes_dark from '/logos/Logo_Kemenkes_dark.png';
 import dewasa from '/thumbnail/dewasa.jpeg';
 import anak from '/thumbnail/anak.jpeg';
-import pmo from '/thumbnail/pmo.png';
+import pmo from '/thumbnail/pmo.jpeg';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const cardData = [

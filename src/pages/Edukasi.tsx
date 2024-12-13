@@ -120,6 +120,10 @@ const SyledCard = styled(Card)(({ theme }) => ({
     flexDirection: 'column',
     padding: 0,
     height: '100%',
+    backgroundImage: "url('/bg-card.png')",
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     backgroundColor: (theme).palette.background.paper,
     '&:hover': {
         backgroundColor: 'transparent',
@@ -130,6 +134,13 @@ const SyledCard = styled(Card)(({ theme }) => ({
         outlineColor: 'hsla(210, 98%, 48%, 0.5)',
         outlineOffset: '2px',
     },
+
+    ...theme.applyStyles('dark', {
+        backgroundImage: "url('/bg-card.png')",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    })
 }));
 
 const SyledCardContent = styled(CardContent)({
