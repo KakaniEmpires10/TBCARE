@@ -26,15 +26,28 @@ export default function LogoCollection() {
 
     return (
         <>
-            <Divider style={{ borderWidth: '1px' }} />
-            <Box id="logoCollection" sx={{ py: 4 }}>
-                <Grid container sx={{ justifyContent: 'center', mt: 0.5, gap: 10, alignItems: 'center' }}>
+            <Box
+                id="logoCollection"
+                sx={(theme) => ({
+                    width: '100%',
+                    py: 4,
+                    backgroundRepeat: 'no-repeat',
+
+                    backgroundImage:
+                        'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)',
+                    ...theme.applyStyles('dark', {
+                        backgroundImage:
+                            'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)',
+                    }),
+                })}
+            >
+                <Grid container sx={{ justifyContent: 'center', gap: 10, alignItems: 'center' }}>
                     {logos.map((logo, index) => (
                         <Grid item key={index}>
                             <img
                                 src={logo}
                                 alt={`Logos ${index + 1}`}
-                                style={{ width: '120px'}}
+                                style={{ width: '110px' }}
                             />
                         </Grid>
                     ))}
