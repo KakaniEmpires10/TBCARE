@@ -83,7 +83,7 @@ export default function Hero() {
         >
             <Container
                 disableGutters
-                maxWidth='xl'
+                maxWidth={false}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',

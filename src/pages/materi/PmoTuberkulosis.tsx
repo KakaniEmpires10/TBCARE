@@ -79,17 +79,6 @@ const PmoTuberkulosis = () => {
                         <img style={{ width: '100%', height: 'auto' }} src={pmo_1} alt="pmo_1" />
                     </Box>
                 </Box>
-                <Divider sx={{ mb: 5 }} />
-                <Box component='article'>
-                    <Typography component="h2" variant="h4">Tugas PMO</Typography>
-                    <Divider sx={{ my: 2, width: '5rem' }} />
-                    <ul style={{ paddingLeft: '16px' }}>
-                        <li style={{ marginBottom: '0.8rem' }}>Berat badan turun/tidak naik dalam 2 bulan terakhir, tidak membaik dengan asupan gizi yang baik</li>
-                        <li style={{ marginBottom: '0.8rem' }}>Demam lama lebih ≥ 2 minggu dan/atau berulang tanpa sebab. Demam umumnya tidak tinggi</li>
-                        <li style={{ marginBottom: '0.8rem' }}>Batuk lama ≥ 2 minggu. Batuk terus menerus, tidak membaik dengan pengobatan lain sesuai indikasi</li>
-                        <li style={{ marginBottom: '0.8rem' }}>Lesu dan anak kurang aktif bermain</li>
-                    </ul>
-                </Box>
             </Container>
         </Box>
     )
