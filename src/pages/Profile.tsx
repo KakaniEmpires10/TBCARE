@@ -89,7 +89,7 @@ const Profile = () => {
     return (
         <>
             <SEO
-                title="Profil Anggota TBCARE"
+                title="Profil Anggota"
                 description="Tentang TBCARE - Platform edukasi tuberkulosis yang didedikasikan untuk meningkatkan pemahaman masyarakat tentang TB dan pengobatannya."
                 keywords="profil TBCARE, tentang TB, misi visi tuberkulosis, platform edukasi kesehatan"
                 url="https://tbcare.vercel.app/profil"

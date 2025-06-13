@@ -28,7 +28,7 @@ const SEO: React.FC<SEOProps> = ({
     const baseUrl = 'https://tbcare.vercel.app';
 
     // full title
-    const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
+    const fullTitle = title ? title : defaultTitle;
 
     // Use provided values or defaults
     const metaDescription = description || defaultDescription;
