@@ -16,7 +16,7 @@ import rihhadatul_aisy from '/profil/Rihhadatul_Aisy.jpg'
 import ula_urzia from '/profil/Ula_Urzia.jpg'
 import yolanda from '/profil/Yolanda.jpeg'
 import zhada_mawadi from '/profil/Zhada_Mawadi.jpg'
-import { useEffect } from "react";
+import SEO from "../utils/SEO";
 
 const data = [
     {
@@ -86,78 +86,81 @@ const data = [
 ]
 
 const Profile = () => {
-
-    useEffect(() => {
-        document.title = 'TBC | Profil';
-    }, []);
-
     return (
-        <Box
-            id="profil"
-            sx={(theme) => ({
-                width: '100%',
-                backgroundRepeat: 'no-repeat',
+        <>
+            <SEO
+                title="Profil Anggota TBCARE"
+                description="Tentang TBCARE - Platform edukasi tuberkulosis yang didedikasikan untuk meningkatkan pemahaman masyarakat tentang TB dan pengobatannya."
+                keywords="profil TBCARE, tentang TB, misi visi tuberkulosis, platform edukasi kesehatan"
+                url="https://tbcare.vercel.app/profil"
+            />
+            <Box
+                id="profil"
+                sx={(theme) => ({
+                    width: '100%',
+                    backgroundRepeat: 'no-repeat',
 
-                backgroundImage:
-                    'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)',
-                ...theme.applyStyles('dark', {
                     backgroundImage:
-                        'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)',
-                }),
-            })}
-        >
-            <Container
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    pt: { xs: 14, sm: 20 },
-                    pb: { xs: 8, sm: 12 },
-                }}
+                        'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)',
+                    ...theme.applyStyles('dark', {
+                        backgroundImage:
+                            'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)',
+                    }),
+                })}
             >
-                <Stack
-                    spacing={2}
-                    useFlexGap
-                    sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+                <Container
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        pt: { xs: 14, sm: 20 },
+                        pb: { xs: 8, sm: 12 },
+                    }}
                 >
-                    <Typography
-                        variant="h1"
-                        sx={{
-                            display: 'flex',
-                            flexDirection: { xs: 'column', sm: 'row' },
-                            alignItems: 'center',
-                            fontSize: 'clamp(3rem, 10vw, 3.5rem)',
-                        }}
+                    <Stack
+                        spacing={2}
+                        useFlexGap
+                        sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
                     >
-                        Anggota
-                    </Typography>
-                    <Divider sx={{ width: 400, mx: 'auto', mb: 5 }} />
-                </Stack>
-                <Grid container spacing={3}>
-                    {data.map((item) => {
-                        return (
-                            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.name}>
-                                <Card>
-                                    <CardMedia
-                                        sx={{ height: '12rem', mb: 2, borderRadius: 1 }}
-                                        image={item.img}
-                                        title={item.name} 
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h6">
-                                            {item.name}
-                                        </Typography>
-                                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                                            Mahasiswa S2 <br /> Fakultas Keperawatan <b>USK</b>
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
-                            </Grid>
-                        )
-                    })}
-                </Grid>
-            </Container>
-        </Box>
+                        <Typography
+                            variant="h1"
+                            sx={{
+                                display: 'flex',
+                                flexDirection: { xs: 'column', sm: 'row' },
+                                alignItems: 'center',
+                                fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+                            }}
+                        >
+                            Anggota
+                        </Typography>
+                        <Divider sx={{ width: 400, mx: 'auto', mb: 5 }} />
+                    </Stack>
+                    <Grid container spacing={3}>
+                        {data.map((item) => {
+                            return (
+                                <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.name}>
+                                    <Card>
+                                        <CardMedia
+                                            sx={{ height: '12rem', mb: 2, borderRadius: 1 }}
+                                            image={item.img}
+                                            title={item.name}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h6">
+                                                {item.name}
+                                            </Typography>
+                                            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                                                Mahasiswa S2 <br /> Fakultas Keperawatan <b>USK</b>
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Grid>
+                            )
+                        })}
+                    </Grid>
+                </Container>
+            </Box>
+        </>
     )
 }
 

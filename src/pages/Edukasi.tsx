@@ -1,6 +1,6 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Container, Dialog, Divider, Stack, styled, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Grid from '@mui/material/Grid2';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import DownloadIcon from '@mui/icons-material/Download';
 
@@ -17,6 +17,7 @@ import Obati_Sampai_Penuh from '/poster/Obati_Sampai_Penuh.jpg'
 import Periksa_TB from '/poster/Periksa_TB.jpg'
 import Tuberkulosis from '/poster/Tuberkulosis.jpg'
 import { NavLink } from "react-router";
+import SEO from "../utils/SEO";
 
 const leafletData = [
     {
@@ -189,12 +190,14 @@ const Edukasi = () => {
         setOpen(false);
     };
 
-    useEffect(() => {
-        document.title = 'TBC | Edukasi';
-    }, []);
-
     return (
         <>
+            <SEO
+                title="Edukasi Tuberkulosis"
+                description="Program edukasi interaktif tentang tuberkulosis. Tingkatkan pemahaman Anda tentang TB melalui berbagai metode pembelajaran yang menarik."
+                keywords="edukasi tuberkulosis, program edukasi TB, pembelajaran interaktif TB, sosialisasi tuberkulosis"
+                url="https://tbcare.vercel.app/edukasi"
+            />
             <Box
                 id="profil"
                 sx={(theme) => ({
