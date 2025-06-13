@@ -42,6 +42,7 @@ const SEO: React.FC<SEOProps> = ({
             <meta name="description" content={metaDescription} />
             <meta name="keywords" content={metaKeywords} />
             <meta name="author" content={author} />
+            <meta name='developer' content='Muhammad Alim Kakani' />
             <meta name="robots" content="index, follow" />
             <meta name="language" content="id-ID" />
             <meta name="geo.region" content="ID" />
